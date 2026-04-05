@@ -20,6 +20,7 @@
 .summary-card--balance { border-top: 3px solid var(--accent); }
 .summary-card--income  { border-top: 3px solid #74b9ff; }
 .summary-card--expense { border-top: 3px solid var(--danger); }
+.summary-card--default { border-top: 3px solid #a29bfe; }
 
 .summary-card__top {
   display: flex;
