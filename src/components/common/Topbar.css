@@ -1,0 +1,25 @@
+.topbar {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  background: var(--sidebar-bg);
+  align-items: center;
+  padding: 0 16px;
+  gap: 14px;
+  z-index: 198;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.topbar__menu-btn {
+  color: rgba(255,255,255,0.7);
+  display: flex; align-items: center; justify-content: center;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: background var(--transition);
+}
+.topbar__menu-btn:hover { background: rgba(255,255,255,0.08); }
+.topbar__title { color: #fff; font-weight: 700; font-size: 0.95rem; letter-spacing: -0.02em; }
+@media (max-width: 900px) { .topbar { display: flex; } }

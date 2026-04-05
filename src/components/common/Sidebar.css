@@ -1,0 +1,205 @@
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  width: var(--sidebar-w);
+  background: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  transition: transform var(--transition-slow);
+}
+
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 199;
+}
+
+/* Logo */
+.sidebar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.sidebar__logo-icon {
+  width: 36px; height: 36px;
+  background: rgba(91,95,237,0.25);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.sidebar__logo-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+/* Nav */
+.sidebar__nav {
+  flex: 1;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.sidebar__nav-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+  padding: 0 8px;
+  margin-bottom: 8px;
+}
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  color: rgba(255,255,255,0.5);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.sidebar__link:hover {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.9);
+}
+.sidebar__link--active {
+  background: rgba(91,95,237,0.2) !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+.sidebar__link--active .sidebar__link-icon {
+  color: var(--accent);
+}
+.sidebar__link-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Footer */
+.sidebar__footer {
+  padding: 16px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Role toggle */
+.sidebar__section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 6px;
+}
+.role-toggle {
+  display: flex;
+  background: rgba(0,0,0,0.25);
+  border-radius: 8px;
+  padding: 3px;
+  gap: 3px;
+}
+.role-toggle__btn {
+  flex: 1;
+  padding: 7px 0;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: all var(--transition);
+  border: none;
+  background: none;
+  font-family: inherit;
+  letter-spacing: 0.01em;
+}
+.role-toggle__btn--active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(91,95,237,0.4);
+}
+
+/* Theme toggle */
+.theme-toggle-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.theme-toggle {
+  display: flex;
+  background: rgba(0,0,0,0.25);
+  border-radius: 8px;
+  padding: 3px;
+  gap: 3px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.theme-toggle__opt {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 0;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.35);
+  transition: all var(--transition);
+}
+.theme-toggle__opt--active {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.9);
+}
+
+/* User */
+.sidebar__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.sidebar__avatar {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+.sidebar__user-name {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+}
+.sidebar__user-role {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  text-transform: capitalize;
+  margin-top: 1px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar--open { transform: translateX(0); box-shadow: var(--shadow-lg); }
+  .sidebar-backdrop { display: block; }
+}

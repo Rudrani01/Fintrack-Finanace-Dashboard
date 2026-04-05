@@ -1,0 +1,16 @@
+.insight-card {
+  background: var(--bg-surface); border-radius: var(--radius-lg);
+  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+  padding: 20px 22px; display: flex; align-items: flex-start; gap: 14px;
+  opacity: 0; animation-fill-mode: forwards;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.insight-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.insight-card__icon {
+  width: 42px; height: 42px; border-radius: 12px;
+  background: var(--bg-muted); display: flex; align-items: center;
+  justify-content: center; font-size: 1.2rem; flex-shrink: 0;
+}
+.insight-card__title { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 4px; }
+.insight-card__value { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.03em; font-family: 'DM Mono', monospace; }
+.insight-card__sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }

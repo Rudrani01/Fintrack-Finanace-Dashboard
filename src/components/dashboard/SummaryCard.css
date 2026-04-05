@@ -1,0 +1,61 @@
+.summary-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: box-shadow var(--transition), transform var(--transition);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.summary-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.summary-card--balance { border-top: 3px solid var(--accent); }
+.summary-card--income  { border-top: 3px solid #74b9ff; }
+.summary-card--expense { border-top: 3px solid var(--danger); }
+
+.summary-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summary-card__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.summary-card__icon {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.summary-card__amount {
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  font-family: 'DM Mono', monospace;
+}
+
+.summary-card__trend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+.trend--up { color: var(--accent); }
+.trend--down { color: var(--danger); }
+.trend__arrow { font-size: 0.85em; }
+.trend__label { color: var(--text-muted); font-weight: 400; margin-left: 2px; }

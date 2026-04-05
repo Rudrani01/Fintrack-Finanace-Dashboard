@@ -1,0 +1,41 @@
+.txn-form { display: flex; flex-direction: column; gap: 16px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field--grow { flex: 1; }
+.form-field--amount { width: 140px; }
+.form-field--date { width: 160px; }
+.form-row { display: flex; gap: 12px; align-items: flex-start; }
+.form-label { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.01em; }
+.form-optional { font-weight: 400; color: var(--text-muted); }
+.form-input {
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-family: inherit;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 100%;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+.form-input--error { border-color: var(--danger); }
+.form-error { font-size: 0.75rem; color: var(--danger); }
+.type-toggle { display: flex; gap: 8px; }
+.type-btn {
+  flex: 1; padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-base);
+  color: var(--text-muted);
+  font-size: 0.85rem; font-weight: 500;
+  cursor: pointer; transition: all var(--transition);
+  font-family: inherit;
+}
+.type-btn--active.type-btn--income { background: rgba(0,212,170,0.12); color: var(--accent); border-color: var(--accent); }
+.type-btn--active.type-btn--expense { background: rgba(255,94,126,0.1); color: var(--danger); border-color: var(--danger); }
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 4px; padding-top: 16px; border-top: 1px solid var(--border-subtle); }
+@media (max-width: 500px) { .form-row { flex-direction: column; } .form-field--amount, .form-field--date { width: 100%; } }

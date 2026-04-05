@@ -1,0 +1,21 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.badge__dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.badge--income  { background: rgba(0,212,170,0.15); color: var(--accent); }
+.badge--expense { background: rgba(255,94,126,0.12); color: var(--danger); }
+.badge--default { background: var(--bg-muted); color: var(--text-secondary); }
+.badge--warning { background: rgba(255,197,66,0.15); color: var(--warning); }
+.badge--admin   { background: rgba(116,185,255,0.15); color: #74b9ff; }
+.badge--viewer  { background: var(--bg-muted); color: var(--text-muted); }
