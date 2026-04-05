@@ -6,7 +6,7 @@ A clean, interactive personal finance dashboard built as a frontend development 
 
 ## Live Preview
 
-> Run locally using the setup instructions below.
+https://fintrack-finanace-dashboard.vercel.app
 
 ---
 
