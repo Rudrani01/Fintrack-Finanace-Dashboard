@@ -145,7 +145,7 @@ This means each page's JavaScript is only downloaded when the user navigates to 
 
 - **Pure CSS over a component library** — gives full control over every visual detail and avoids unnecessary bundle size
 - **CSS variables for theming** — a single `[data-theme="dark"]` override switches the entire app, no JS required
-- **Context API over Redux** — three small, focused contexts are the right tool for this scale. Redux would be overkill
+- **Context API over Redux** — three focused contexts, each owning one concern, which is the right scale for this project.
 - **Mock API with setTimeout** — makes the app behave like a real async application, allowing loading states and error handling to be demonstrated
 - **Lucide React for icons** — consistent stroke-based icon set that works well at small sizes and in both themes
 
